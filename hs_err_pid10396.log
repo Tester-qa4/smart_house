@@ -1,0 +1,199 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for Failed to commit area from 0x0000000700400000 to 0x0000000710400000 of length 268435456.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (c:/BuildAgent/work/1eae4dac1d648407/src/hotspot/os/windows/os_windows.cpp:3296), pid=10396, tid=13572
+#
+# JRE version:  (11.0.6+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.6+8-b765.40, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\lib\idea_rt.jar=56205:C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\bin -Dfile.encoding=UTF-8 com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 ru.netology.ConditionerTest,shouldincreaseCurrentTemperatureTest
+
+Host: AMD FX(tm)-6300 Six-Core Processor             , 6 cores, 15G,  Windows 10 , 64 bit Build 18362 (10.0.18362.778)
+Time: Thu Jun  4 21:27:00 2020 RTZ 3 (ceia) elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002632443c800):  JavaThread "Unknown thread" [_thread_in_vm, id=13572, stack(0x0000008e44100000,0x0000008e44200000)]
+
+Stack: [0x0000008e44100000,0x0000008e44200000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5ddf9a]
+V  [jvm.dll+0x710ae5]
+V  [jvm.dll+0x712005]
+V  [jvm.dll+0x7126b3]
+V  [jvm.dll+0x23e718]
+V  [jvm.dll+0x5db444]
+V  [jvm.dll+0x5d0675]
+V  [jvm.dll+0x2faf1b]
+V  [jvm.dll+0x2fae8a]
+V  [jvm.dll+0x2fad62]
+V  [jvm.dll+0x2ffc36]
+V  [jvm.dll+0x3484e3]
+V  [jvm.dll+0x348be6]
+V  [jvm.dll+0x3485e3]
+V  [jvm.dll+0x2d5938]
+V  [jvm.dll+0x2d6ad7]
+V  [jvm.dll+0x6ef8a7]
+V  [jvm.dll+0x6f109c]
+V  [jvm.dll+0x355b29]
+V  [jvm.dll+0x6d4a7e]
+V  [jvm.dll+0x3bf053]
+V  [jvm.dll+0x3c15d1]
+C  [jli.dll+0x5363]
+C  [ucrtbase.dll+0x20e82]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ce51]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000026322258db0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000026324453800 GCTaskThread "GC Thread#0" [stack: 0x0000008e44200000,0x0000008e44300000] [id=22508]
+  0x00000263244b0000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000008e44300000,0x0000008e44400000] [id=9128]
+  0x00000263244b2000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000008e44400000,0x0000008e44500000] [id=14100]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8462d6047]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002632443bf10] Heap_lock - owner thread: 0x000002632443c800
+
+Heap address: 0x0000000700400000, size: 4092 MB, Compressed Oops mode: Non-zero based: 0x0000000700400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.009 Loaded shared library C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\zip.dll
+Event: 0.011 Loaded shared library C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\jimage.dll
+
+
+Dynamic libraries:
+0x00007ff7d9b70000 - 0x00007ff7d9b7a000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\java.exe
+0x00007ff8a4b20000 - 0x00007ff8a4d10000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff8a3f40000 - 0x00007ff8a3ff2000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff8a2280000 - 0x00007ff8a2524000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff8a2530000 - 0x00007ff8a262a000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff8751b0000 - 0x00007ff8751c9000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\jli.dll
+0x00007ff873250000 - 0x00007ff873267000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\VCRUNTIME140.dll
+0x00007ff8a4730000 - 0x00007ff8a48c4000 	C:\Windows\System32\USER32.dll
+0x00007ff899400000 - 0x00007ff899684000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.836_none_e6c4b943130f18ed\COMCTL32.dll
+0x00007ff8a2250000 - 0x00007ff8a2271000 	C:\Windows\System32\win32u.dll
+0x00007ff8a4a10000 - 0x00007ff8a4aae000 	C:\Windows\System32\msvcrt.dll
+0x00007ff8a4680000 - 0x00007ff8a46a6000 	C:\Windows\System32\GDI32.dll
+0x00007ff8a40b0000 - 0x00007ff8a43e6000 	C:\Windows\System32\combase.dll
+0x00007ff8a2700000 - 0x00007ff8a2894000 	C:\Windows\System32\gdi32full.dll
+0x00007ff8a2d70000 - 0x00007ff8a2e90000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff8a2aa0000 - 0x00007ff8a2b3e000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff8a2680000 - 0x00007ff8a2700000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff8a3f10000 - 0x00007ff8a3f3e000 	C:\Windows\System32\IMM32.DLL
+0x00007ff85d1f0000 - 0x00007ff85d28d000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\msvcp140.dll
+0x00007ff845ff0000 - 0x00007ff846aad000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\server\jvm.dll
+0x00007ff8a3d20000 - 0x00007ff8a3dc3000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff8a4410000 - 0x00007ff8a44a7000 	C:\Windows\System32\sechost.dll
+0x00007ff8a2d60000 - 0x00007ff8a2d68000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff88c5b0000 - 0x00007ff88c5b9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff898b90000 - 0x00007ff898bb4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff89d120000 - 0x00007ff89d12a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff8a2fd0000 - 0x00007ff8a303f000 	C:\Windows\System32\WS2_32.dll
+0x00007ff898b50000 - 0x00007ff898b7d000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ff8a2630000 - 0x00007ff8a267a000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ff8a1a10000 - 0x00007ff8a1a21000 	C:\Windows\System32\kernel.appcore.dll
+0x00007ff883d50000 - 0x00007ff883d61000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\verify.dll
+0x00007ff894af0000 - 0x00007ff894ce4000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff895390000 - 0x00007ff8953ba000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff883d20000 - 0x00007ff883d49000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\java.dll
+0x00007ff89bbb0000 - 0x00007ff89bbbf000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\instrument.dll
+0x00007ff883d00000 - 0x00007ff883d18000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\zip.dll
+0x00007ff891930000 - 0x00007ff89193b000 	C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.836_none_e6c4b943130f18ed;C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\jbr\bin\server
+
+VM Arguments:
+jvm_args: -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\lib\idea_rt.jar=56205:C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\bin -Dfile.encoding=UTF-8 
+java_command: com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 ru.netology.ConditionerTest,shouldincreaseCurrentTemperatureTest
+java_class_path (initial): C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\lib\idea_rt.jar;C:\Users\Fonty\.m2\repository\org\junit\platform\junit-platform-launcher\1.4.2\junit-platform-launcher-1.4.2.jar;C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\plugins\junit\lib\junit5-rt.jar;C:\Users\Fonty\AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\201.7223.91\plugins\junit\lib\junit-rt.jar;F:\prt3\smart-house\target\test-classes;F:\prt3\smart-house\target\classes;C:\Users\Fonty\.m2\repository\org\junit\jupiter\junit-jupiter\5.4.2\junit-jupiter-5.4.2.jar;C:\Users\Fonty\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.4.2\junit-jupiter-api-5.4.2.jar;C:\Users\Fonty\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Fonty\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\Fonty\.m2\repository\org\junit\platform\junit-platform-commons\1.4.2\junit-platform-commons-1.4.2.jar;C:\Users\Fonty\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.4.2\junit-jupiter-params-5.4.2.jar;C:\Users\Fonty\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.4.2\junit-jupiter-engine-5.4.2.jar;C:\Users\Fonty\.m2\repository\org\junit\platform\junit-platform-engine\1.4.2\junit-platform-engine-1.4.2.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 6                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4290772992                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=D:\jdk\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Users\Fonty\AppData\Local\Microsoft\WindowsApps;D:\babun\.babun
+USERNAME=Fonty
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.778)
+
+CPU:total 6 (initial active 6) (6 cores per cpu, 1 threads per core) family 21 model 2 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1, fma
+
+Memory: 4k page, system-wide physical 16366M (6263M free)
+TotalPageFile size 18414M (AvailPageFile size 101M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 56M, peak: 312M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.6+8-b765.40) for windows-amd64 JRE (11.0.6+8-b765.40), built on Apr 20 2020 14:37:21 by "" with MS VC++ 14.0 (VS2015)
+
+END.
