@@ -34,8 +34,6 @@ void shouldIncreaseCurrentTemperatureTestMax() {
     conditioner.IncreaseCurrentTemperature();
     assertEquals(30, conditioner.getCurrentTemperature());
 }
-
-
     @Test
     void shouldDecreaseCurrentTemperatureTest() {
         Conditioner conditioner = new Conditioner();
@@ -46,7 +44,6 @@ void shouldIncreaseCurrentTemperatureTestMax() {
         conditioner.DecreaseCurrentTemperature();
         assertEquals(29, conditioner.getCurrentTemperature());
     }
-
     @Test
     void shouldDecreaseCurrentTemperatureTestMin() {
         Conditioner conditioner = new Conditioner();
