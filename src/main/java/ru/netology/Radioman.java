@@ -75,7 +75,7 @@ public class Radioman {
         }
         numberCurrentStation -= 1;
         if (numberCurrentStation < minStation) {
-            numberCurrentStation = 9;
+            numberCurrentStation = maxStation;
         }
         this.prevStation = numberCurrentStation;
     }
